@@ -16,9 +16,9 @@ class arrayTests {
 	@Test
 	void canIterateNativeArray() {
 		String[]airplaneMakes = { "Cessna", "Piper", "Beechcraft", "Cessna"};
-		for(String s : airplaneMakes)
+		for(String s : airplaneMakes) {
 			System.out.println(s);
-
+		}
 		assertEquals(4, airplaneMakes.length, "the array should have 4 items.");
 	}
 
@@ -33,8 +33,9 @@ class arrayTests {
 		airplaneMakes.add("Piper");
 		airplaneMakes.add("Beechcraft");
 		airplaneMakes.add("Cessna");
-		for (int i = 0; i < airplaneMakes.size(); i++)
+		for (int i = 0; i < airplaneMakes.size(); i++) {
             System.out.println(airplaneMakes.get(i));
+		}
 		assertEquals(4, airplaneMakes.size(), "the list should have 4 items.");
 	}
 
