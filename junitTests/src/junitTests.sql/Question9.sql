@@ -1,0 +1,1 @@
+UPDATE `store` SET last_update = current_timestamp
