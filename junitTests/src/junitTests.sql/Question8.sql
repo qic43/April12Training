@@ -1,0 +1,1 @@
+INSERT INTO store (store_id, manager_staff_id,address_id,last_update) values(123,23,1123,current_date());
