@@ -1,3 +1,3 @@
-SELECT SUM(amount) FROM payment
-left JOIN customer
-on customer.email = 'NANCY.THOMAS@sakilacustomer.org';
+SELECT * FROM payment
+JOIN customer on customer.customer_id = payment.customer_id
+where customer.email = 'NANCY.THOMAS@sakilacustomer.org';

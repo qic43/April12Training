@@ -1,12 +1,9 @@
-DELIMITER //
 
-CREATE PROCEDURE Store2()
-BEGIN
-	SELECT inventory_id FROM inventory
-    inner join film on title = 'Alien Center'
-    Limit 4;
-END //
+SET @filmId = (
+Select f.film_id
+From film AS f
+WHERE f.title = 'Alien Center');
 
-DELIMITER ;
-
-CALL Store2()
+SET @filmCount = 0;
+Call film_in_stock(@filmId, 2, @filmCount);
+Select @filmCount;

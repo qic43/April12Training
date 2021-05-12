@@ -6,3 +6,7 @@ Inner JOIN film_actor
 on film_actor.film_id = film.film_id 
 Inner JOIN actor on actor.actor_id = film_actor.actor_id 
 AND actor.first_name = 'Bob' And actor.last_name = 'Fawcett';
+
+Select film_info FROM actor_info
+where first_name = 'BOB'
+AND last_name = 'FAWCETT';
