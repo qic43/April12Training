@@ -1,0 +1,28 @@
+Fucntional Testing:
+User should be search any item.
+1. Can I find any item I want?
+2. Check if the search box is present or not.
+3. Does the search box provides any hint when I enter some keywords?
+4. Does the search box offers typo corrections for the search query?
+
+
+Summary
+User should be able to find any time they want and the search box should be present at the home page.
+The search box should provide hint when entering the keywords and should also prvoide typo corrections.
+
+
+Setup
+Register and login as a valid user in the amazon.
+
+Steps/Except Result
+
+1. Go to the home page         --- Search Box should be present and empty. Should provdide any categories for seacrhing
+2. Enter a letter in the search box       --- Search Box should provide related item with the letter. For example: a-apple
+3. Enter some typo in the search box    ---The search page should correct the typo.
+4. Enter any item in any categories    --- The result should be showed.
+
+
+
+
+
+
