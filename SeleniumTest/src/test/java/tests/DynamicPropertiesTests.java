@@ -1,3 +1,5 @@
+package tests;
+
 import static org.testng.Assert.assertEquals;
 
 import java.util.concurrent.TimeUnit;
@@ -8,11 +10,14 @@ import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
+import pages.DynamicPropertiesPage;
+
 public class DynamicPropertiesTests {
 	protected WebDriver _driver;
+	protected String baseurl = "https://demoqa.com/";
 	@Test
 	public void VisibleTest() {
-		DynamicPropertiesPage page = new DynamicPropertiesPage(_driver).navigate();
+		DynamicPropertiesPage page = new DynamicPropertiesPage(_driver, baseurl).navigate();
 		
 		String response = page.waitForVisibleAndGetResponse();
 		

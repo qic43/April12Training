@@ -1,3 +1,5 @@
+package tests;
+
 import static org.testng.Assert.assertEquals;
 
 import org.openqa.selenium.WebDriver;
@@ -6,8 +8,11 @@ import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
+import pages.TextBoxPage;
+
 public class TextBoxTests {
 	private WebDriver _driver;
+	protected String baseurl = "https://demoqa.com/";
 	@Test
 	public void canSubmitTextBox() {
 		String fullName = "fName lName";
@@ -15,11 +20,11 @@ public class TextBoxTests {
 		String currentAddress = "currentAddress";
 		String permanentAddress = "permanentAddress";
 
-		TextBoxPage page = new TextBoxPage(_driver)
+		TextBoxPage page = new TextBoxPage(_driver, baseurl)
 				.navigate()
 				.enterData(fullName,email,currentAddress,permanentAddress);
 
-		String[]result = page.submitAndGetReuslt();
+		String[]result = page.submitAndGetResult();
 
 		assertEquals("Name:" + fullName, result[0], "the name text box message should be expected");
 		assertEquals("Email:" + email, result[1], "the email text box message should be expected");

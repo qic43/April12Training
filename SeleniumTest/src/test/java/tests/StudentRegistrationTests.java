@@ -1,4 +1,9 @@
+package tests;
+
 import org.testng.annotations.Test;
+
+import pages.StudentRegistrationPage;
+
 import org.testng.annotations.BeforeMethod;
 
 import static org.testng.Assert.assertEquals;

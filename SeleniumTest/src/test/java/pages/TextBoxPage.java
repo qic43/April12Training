@@ -1,3 +1,5 @@
+package pages;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -21,8 +23,8 @@ public class TextBoxPage extends PageSuperClass{
 	@FindBy(how = How.ID, using="submit")
 	private WebElement submitButton;
 	
-	protected TextBoxPage(WebDriver driver) {
-		super(driver);
+	public TextBoxPage(WebDriver driver, String baseUrl) {
+		super(driver, baseUrl);
 	}
 
 	public TextBoxPage navigate() {
@@ -40,7 +42,7 @@ public class TextBoxPage extends PageSuperClass{
 		return this;
 	}
 	
-	public String[] submitAndGetReuslt() {
+	public String[] submitAndGetResult() {
 		submitButton.click();
 		String name = driver.findElement(By.id("name")).getText();
 		String email = driver.findElement(By.id("email")).getText();

@@ -1,3 +1,5 @@
+package tests;
+
 import static org.testng.Assert.assertEquals;
 
 import org.openqa.selenium.WebDriver;
@@ -6,11 +8,14 @@ import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
+import pages.RadioButtonPage;
+
 public class RadioButtonTests {
 	private WebDriver _driver;
+	protected String baseurl = "https://demoqa.com/";
 	@Test
 	public void canClickRadioButton() {
-		RadioButtonPage page = new RadioButtonPage(_driver).navigate();
+		RadioButtonPage page = new RadioButtonPage(_driver, baseurl).navigate();
 		
 		String message = page.clickYesButton();
 		String expectedmessageForYesButton = "You have selected Yes";

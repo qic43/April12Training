@@ -1,3 +1,5 @@
+package pages;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -13,8 +15,8 @@ public class NewLinksPage extends PageSuperClass{
 	@FindBy(how = How.ID, using="created")
 	private WebElement createdButton;
 
-	protected NewLinksPage(WebDriver driver) {
-		super(driver);
+	public NewLinksPage(WebDriver driver, String baseUrl) {
+		super(driver, baseUrl);
 	}
 
 	public NewLinksPage navigate() {

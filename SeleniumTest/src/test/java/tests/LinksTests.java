@@ -1,3 +1,5 @@
+package tests;
+
 import static org.testng.Assert.assertEquals;
 
 import java.util.concurrent.TimeUnit;
@@ -8,11 +10,14 @@ import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
+import pages.NewLinksPage;
+
 public class LinksTests {
 	protected WebDriver _driver;
+	protected String baseurl = "https://demoqa.com/";
 	@Test
 	public void switchToNewWeb() {
-		NewLinksPage page = new NewLinksPage(_driver).navigate();
+		NewLinksPage page = new NewLinksPage(_driver, baseurl).navigate();
 		
 		String url = page.clickHomeButtonAndJoinNowButton().getURL();
 		
@@ -24,7 +29,7 @@ public class LinksTests {
 	
 	@Test
 	public void clickCreateHyperlink() {
-		NewLinksPage page = new NewLinksPage(_driver).navigate();
+		NewLinksPage page = new NewLinksPage(_driver, baseurl).navigate();
 		
 		String linkResponse = page.clickCreatedButton().getTextRespone();
 		

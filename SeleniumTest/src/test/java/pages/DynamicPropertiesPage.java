@@ -1,3 +1,5 @@
+package pages;
+
 import java.time.Duration;
 
 import org.openqa.selenium.By;
@@ -8,8 +10,8 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 
 public class DynamicPropertiesPage extends PageSuperClass{
 
-	protected DynamicPropertiesPage(WebDriver driver) {
-		super(driver);
+	public DynamicPropertiesPage(WebDriver driver,String baseUrl) {
+		super(driver, baseUrl);
 	}
 
 	public DynamicPropertiesPage navigate() {
