@@ -68,6 +68,6 @@ public class AlertPage extends PageSuperClass {
 		
 		driver.switchTo().alert().sendKeys(name);
 		driver.switchTo().alert().accept();
-		return driver.findElement(By.id("promptResult")).getText();
+		return driver.findElement(By.id("promptResult")).getAttribute(name);
 	}
 }
